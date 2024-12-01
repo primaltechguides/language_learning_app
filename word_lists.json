@@ -1,0 +1,64 @@
+{
+    "basic words_es_1": [
+        [
+            "Good morning",
+            "Buenos días"
+        ],
+        [
+            "Good night",
+            "Buenas noches"
+        ],
+        [
+            "Hello",
+            "Hola"
+        ],
+        [
+            "How are you?",
+            "¿Cómo estás?"
+        ],
+        [
+            "I'm fine, thank you",
+            "Estoy bien, gracias"
+        ],
+        [
+            "What's your name?",
+            "¿Cómo te llamas?"
+        ],
+        [
+            "My name is...",
+            "Mi nombre es..."
+        ],
+        [
+            "Nice to meet you",
+            "Mucho gusto"
+        ],
+        [
+            "I'm sorry",
+            "Lo siento"
+        ],
+        [
+            "Excuse me",
+            "Disculpe"
+        ],
+        [
+            "Yes",
+            "Sí"
+        ],
+        [
+            "No",
+            "No"
+        ],
+        [
+            "Please",
+            "Por favor"
+        ],
+        [
+            "Thank you",
+            "Gracias"
+        ],
+        [
+            "You're welcome",
+            "De nada"
+        ]
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "name": "language_learning_app/backend",
+    "description": "language_learning_app",
+    "authors": [
+        {
+            "name": "user",
+            "email": "user@email.com"
+        }
+    ],
+    "require": {
+        "google/cloud-text-to-speech": "^1.12"
+    }
+}

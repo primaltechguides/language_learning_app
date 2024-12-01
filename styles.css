@@ -1,0 +1,288 @@
+/* frontend/styles.css */
+
+/* ============================
+   1. CSS Reset
+   ============================ */
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================
+   2. Body Styling
+   ============================ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    font-size: 1rem; /* Relative font size for scalability */
+}
+
+/* ============================
+   3. Container Styling
+   ============================ */
+.container {
+    width: 100%; /* Adjusted for full responsiveness */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================
+   4. Heading Styling
+   ============================ */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Responsive heading size */
+}
+
+/* ============================
+   5. Controls Section
+   ============================ */
+.controls {
+    margin-bottom: 20px;
+}
+
+/* ============================
+   6. Controls Row Styling
+   ============================ */
+.controls-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* ============================
+   7. Button Styling
+   ============================ */
+.control-button {
+    padding: 15px 20px; /* Increased padding for touch devices */
+    margin: 5px 10px;
+    font-size: 16px; /* Larger font size for readability */
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.clear-cache {
+    background-color: #555555;
+}
+
+.clear-cache:hover {
+    background-color: #333333;
+}
+
+.delete-list {
+    background-color: #555555;
+}
+
+.delete-list:hover {
+    background-color: #333333;
+}
+
+/* ============================
+   8. Dropdown Group Styling
+   ============================ */
+.dropdown-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5px 15px;
+    width: auto;
+}
+
+.dropdown-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.dropdown-group select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+/* ============================
+   9. New Row: Topic Phrase Row
+   ============================ */
+.topic-phrase-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.topic-selector, .phrase-generator {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 10px;
+    width: auto;
+}
+
+.topic-selector label, .phrase-generator label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.topic-selector select, .phrase-generator input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.phrase-generator input {
+    margin-bottom: 10px;
+}
+
+.phrase-generator button {
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #008CBA;
+    color: white;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.phrase-generator button:hover {
+    background-color: #007bb5;
+}
+
+/* ============================
+   12. Phrases Grid
+   ============================ */
+.phrases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* ============================
+   13. Phrase Card
+   ============================ */
+.phrase-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.phrase-button {
+    background-color: #d3d3d3;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.phrase-button:hover {
+    background-color: #c0c0c0;
+}
+
+.translation {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ============================
+   14. Responsive Design
+   ============================ */
+
+/* For screens smaller than 1000px */
+@media (max-width: 1000px) {
+    .topic-phrase-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* For screens smaller than 800px */
+@media (max-width: 800px) {
+    /* Stack controls-row items vertically */
+    .controls-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .dropdown-group {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .topic-selector, .phrase-generator {
+        flex: 1 1 100%;
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .topic-selector select, .phrase-generator input {
+        width: 100%;
+    }
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+    /* Adjustments for small screens */
+    .dropdown-group {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .topic-selector select, .phrase-generator input {
+        width: 100%;
+    }
+    
+    .controls-row .control-button,
+    .phrase-generator button {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .phrases-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .phrase-card {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5rem; /* Smaller heading size for mobile */
+    }
+    
+    body {
+        font-size: 0.9rem; /* Slightly smaller base font */
+    }
+    
+    .phrase-button {
+        font-size: 16px;
+    }
+    
+    .translation {
+        font-size: 14px;
+    }
+}

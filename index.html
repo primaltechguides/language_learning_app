@@ -1,0 +1,83 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Language Learning App</title>
+    <!-- Added viewport meta tag for responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <div class="container">
+        <h1>Language Learning App</h1>
+        
+        <!-- Controls Section: Organized into Two Rows -->
+        <div class="controls">
+            <!-- Row 1: Clear Cache and Delete List Buttons -->
+            <div class="controls-row">
+                <button id="clearCacheBtn" class="control-button clear-cache">Clear Audio Cache</button>
+                <button id="deleteListBtn" class="control-button delete-list">Delete Selected List</button>
+            </div>
+            
+            <!-- Row 2: TTS Service, Language, and Speed Dropdowns -->
+            <div class="controls-row">
+                <!-- TTS Service Selection Dropdown -->
+                <div class="dropdown-group">
+                    <label for="ttsServiceDropdown">Select TTS Service:</label>
+                    <select id="ttsServiceDropdown">
+                        <option value="openai">OpenAI TTS</option>
+                        <option value="google">Google TTS</option>
+                    </select>
+                </div>
+                
+                <!-- Language Selection Dropdown -->
+                <div class="dropdown-group">
+                    <label for="languageDropdown">Select Language:</label>
+                    <select id="languageDropdown">
+                        <!-- Options populated dynamically -->
+                    </select>
+                </div>
+                
+                <!-- Speed Selection Dropdown -->
+                <div class="dropdown-group">
+                    <label for="speedDropdown">Select Speed:</label>
+                    <select id="speedDropdown">
+                        <option value="0.5">0.5x</option>
+                        <option value="0.75">0.75x</option>
+                        <option value="1" selected>1x</option>
+                        <option value="1.25">1.25x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="1.75">1.75x</option>
+                        <option value="2">2x</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <!-- New Row: Topic Selection and Phrase Generator -->
+        <div class="topic-phrase-row">
+            <!-- Topic Selection Dropdown -->
+            <div class="topic-selector">
+                <label for="topicDropdown">Select a Topic:</label>
+                <select id="topicDropdown">
+                    <!-- Options populated dynamically -->
+                </select>
+            </div>
+            
+            <!-- Phrase Generator: Input New Topic -->
+            <div class="phrase-generator">
+                <input type="text" id="newTopicInput" placeholder="Enter a new topic" />
+                <button id="generatePhrasesBtn">Generate Phrases</button>
+            </div>
+        </div>
+        
+        <!-- Phrases Display Grid -->
+        <div id="phrasesContainer" class="phrases-grid">
+            <!-- Phrase cards populated dynamically -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
